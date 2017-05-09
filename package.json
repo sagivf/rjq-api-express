@@ -16,7 +16,7 @@
   "keywords": [
     "RethinkDB"
   ],
-  "author": "Sagiv Frankel",
+  "author": "Sagiv Frankel <sagivf@gmal.com> (https://sagivf.github.io/)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sagivf/rjq-api-express/issues"
@@ -26,6 +26,7 @@
     "standard": "^10.0.2"
   },
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "rjq-api": "^1.0.0"
   }
 }
