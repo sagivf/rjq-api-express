@@ -1,11 +1,9 @@
-const assert = require('assert')
 const express = require('express')
 const rjqApi = require('rjq-api')
 
-module.exports = function (path, options) {
+module.exports = function ({path = '/rjq-api', options} = {}) {
   const app = express()
   const router = express.Router()
-  assert(path, 'missing route path')
   const api = rjqApi(options)
 
   router
