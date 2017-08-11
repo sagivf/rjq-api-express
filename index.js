@@ -1,11 +1,12 @@
 const express = require('express')
 const rjqApi = require('rjq-api')
 
-module.exports = function ({path = '/rjq-api', options} = {}) {
+module.exports = function ({path = '/rjq-api', connection, queues} = {}) {
   const app = express()
   const router = express.Router()
-  const api = rjqApi(options)
-
+  const api = rjqApi({
+    queues, connection
+  })
   router
     .get('/', function (req, res) {
       res.send('rjq api - v1.0.0')
